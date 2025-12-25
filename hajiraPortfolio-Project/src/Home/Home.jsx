@@ -3,6 +3,7 @@ import styles from './Home.module.css';
 import { motion} from "framer-motion"
 
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import Product from '../Product/Product.jsx';
 
 function Home(){
 
@@ -272,6 +273,9 @@ function Home(){
             
         </div>
         
+        <div className={styles.productWrapper} id="product"> 
+            <Product /> 
+        </div>
         
         </>
     )
