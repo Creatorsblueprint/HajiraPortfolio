@@ -16,10 +16,15 @@ function Footer({setActive, active}){
                         <h1 onClick={ (e) => {e.preventDefault(); setActive('Home')}}>Home</h1>
                         
                     </div>
-                    <div className={active === 'About' ? styles.activeNav : styles.notActiveNav}>
+                    {/* <div className={active === 'About' ? styles.activeNav : styles.notActiveNav}>
                         <h1 onClick={ (e) => {e.preventDefault();}}>Product</h1>
                         
+                    </div> */}
+                    <div className={active === "About" ? styles.activeNav : styles.notActiveNav}>
+                        <h1 onClick={(e) => { e.preventDefault(); document.getElementById("product").scrollIntoView({ behavior: "smooth" }); }} >Product</h1>
                     </div>
+
+
                     <div className={active === 'Contact' ? styles.activeNav: styles.notActiveNav}>
                         <h1>Contact</h1>
                         
