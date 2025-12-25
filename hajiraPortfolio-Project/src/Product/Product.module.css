@@ -149,10 +149,25 @@
     transition: 0.2s ease-in-out;
 }
 
+.buyButton:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    box-shadow: none;
+    filter: grayscale(30%);
+}
+
+
+.buyButton:hover:disabled {
+    box-shadow: none;
+    transform: none;
+}
+
+
 .buyButton:hover {
     box-shadow: 4px 6px 30px #f763be;
     transform: translateY(-1px);
 }
+
 
 .note p {
     font-family: "Inter", sans-serif;

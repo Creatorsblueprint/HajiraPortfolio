@@ -6,51 +6,39 @@ function ProductSection() {
   const price = 25; // adjust as needed
 
   const [email, setEmail] = useState("");
+  const [isEmailValid, setIsEmailValid] = useState(false);
   const [paymentStatus, setPaymentStatus] = useState(null);
 
-  // Detect ?payment=success or ?payment=cancel 
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search); 
-    const status = params.get("payment");
-     if (status === "success") setPaymentStatus("success");
-      if (status === "cancel") setPaymentStatus("cancel"); 
-      
-      // Remove the query from URL after showing banner 
-      if (status) { 
-        const cleanUrl = window.location.origin + window.location.pathname; 
-        window.history.replaceState({}, "", cleanUrl); 
-      } 
-    }, []);
+  const handleEmail = (email) => {
+    setEmail(email);
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    setIsEmailValid(emailRegex.test(email));
+  }
 
-  const handleBuy = async (e) => {
-    e.preventDefault();
+
+  const handleBuy = async () => {
+
 
     try {
-      const response = await fetch("http://localhost:3000/api/create-payment-intent", {
+      const response = await fetch("https://hajiraportfolio-backend.onrender.com/api/create-payment-intent", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
           amount: price, // backend multiplies by 100
-          email: "playlist@hajira.com", // or collect from user later
-          successUrl: window.location.origin + "/?payment=success",
-          cancelUrl: window.location.origin + "/?payment=cancel",
+          email: email,
+          successUrl: "https://lebohangdev.github.io/HajiraPortfolio/?payment=success",
+          cancelUrl: "https://lebohangdev.github.io/HajiraPortfolio/?payment=cancel",
         }),
       });
 
-      if (!response.ok) {
-        console.error("Failed to create payment intent");
-        return;
-      }
-
       const data = await response.json();
 
-      if (data.redirect_url) {
-        window.location.href = data.redirect_url;
-      } else {
-        console.error("No redirect_url returned from backend");
-      }
+
+      window.location.href = data.redirect_url;
+      console.log("redirect url:", data.redirect_url)
+
     } catch (error) {
       console.error("Error triggering payment:", error);
     }
@@ -58,13 +46,6 @@ function ProductSection() {
 
   return (
     <div className={styles.productSection}>
-      {paymentStatus && (
-        <div className={ paymentStatus === "success" ? styles.successBanner : styles.cancelBanner } >
-          {paymentStatus === "success"
-            ? "Payment successful — your playlist is ready!"
-            : "Payment canceled — no charges were made."}
-        </div>
-      )}
 
       <div className={styles.productContainer}>
         <motion.div
@@ -96,7 +77,7 @@ function ProductSection() {
 
           <div className={styles.description}>
             <p>
-              A curated playlist that captures my exact moodboard energy. 
+              A curated playlist that captures my exact moodboard energy.
               Perfect for night drives, editing sessions, and getting in the content zone.
             </p>
             <p>
@@ -118,7 +99,7 @@ function ProductSection() {
 
           <div className={styles.emailField}>
             <label>Your Email</label>
-            <input type="email" placeholder="you@example.com" value={email} onChange={(e) => setEmail(e.target.value)}
+            <input type="email" placeholder="you@example.com" value={email} onChange={(e) => handleEmail(e.target.value)}
             />
           </div>
 
@@ -127,7 +108,7 @@ function ProductSection() {
               <span className={styles.label}>Price</span>
               <span className={styles.price}>AED {price}</span>
             </div>
-            <button className={styles.buyButton} onClick={handleBuy}>
+            <button disabled={!isEmailValid} className={styles.buyButton} onClick={() => { handleBuy() }}>
               BUY PLAYLIST
             </button>
           </div>
