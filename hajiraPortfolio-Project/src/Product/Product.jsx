@@ -7,7 +7,7 @@ function ProductSection() {
 
   const [email, setEmail] = useState("");
   const [isEmailValid, setIsEmailValid] = useState(false);
-  const [paymentStatus, setPaymentStatus] = useState(null);
+
 
   const handleEmail = (email) => {
     setEmail(email);

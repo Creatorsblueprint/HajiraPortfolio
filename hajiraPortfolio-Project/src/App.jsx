@@ -2,6 +2,9 @@ import Nav from "./Nav/Nav.jsx";
 import Home from "./Home/Home.jsx";
 import About from "./About/About.jsx";
 import Footer from "./Footer/Footer.jsx";
+import PaymentSuccess from "./paymentPopups/PaymentSuccess.jsx";
+import PaymentCancel from "./paymentPopups/PaymentCancel.jsx";
+import Product from "./Product/Product.jsx";
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -35,7 +38,7 @@ function App() {
       const cleanUrl = window.location.origin + window.location.pathname;
       window.history.replaceState({}, "", cleanUrl);
     }
-  }, []);
+  }, [paymentStatus]);
 
 
   let lastScrollTop = 0;
@@ -124,6 +127,17 @@ function App() {
 
 
 
+        </div>
+        <div className={active === 'Product' ? 'activeSection' : 'notActive'}>
+          <Product />
+        </div>
+
+        <div className={paymentStatus === 'PaymentSuccess' ? 'activeSection' : 'notActiveSection'}>
+          <PaymentSuccess setPaymentStatus={setPaymentStatus} />
+        </div>
+
+        <div className={paymentStatus === 'PaymentCancel' ? 'activeSection' : 'notActiveSection'}>
+          <PaymentCancel setPaymentStatus={setPaymentStatus} />
         </div>
 
 

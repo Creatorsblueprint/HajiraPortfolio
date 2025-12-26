@@ -3,7 +3,7 @@ import styles from './Home.module.css';
 import { motion } from "framer-motion"
 
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
-import Product from '../Product/Product.jsx';
+
 
 function Home() {
 
@@ -11,16 +11,16 @@ function Home() {
         {
             social: 'Instagram',
             description: 'Fashion | Lifestyle | Creator Just a girl who drives with elite music taste',
-            followers: '138K',
+            followers: '153K',
             img: 'Images/SocialImages/haju1.jpg',
             icon: 'Images/socialIcons/instagram-Icon.png',
             link: 'https://www.instagram.com/hajirakhaaan?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==',
-            posts: 61
+            posts: 88
         },
         {
             social: 'TikTok',
             description: 'Fast-paced, trend-savvy videos built for engagement',
-            followers: '136K',
+            followers: '167K',
             img: 'Images/SocialImages/haju2.jpg',
             icon: 'Images/socialIcons/tiktok-Icon.png',
             link: 'https://www.tiktok.com/@hajirakhaaan?is_from_webapp=1&sender_device=pc',
@@ -229,9 +229,7 @@ function Home() {
                     </div>
 
                 </div>
-                <div className={styles.productWrapper} id="product">
-                    <Product />
-                </div>
+
 
                 <div className={styles.previewSection}>
                     <div className={styles.previewContainer}>

@@ -26,11 +26,11 @@
 }
 
 #root {
-  background-color: white;
+
+  background-color: #FFFBFF;
   display: grid;
   grid-template-columns: minmax(0, 100%);
-  grid-template-rows: 10rem 1fr auto;
-  height: 100%;
+  grid-template-rows: 1fr;
   width: 100%;
   margin: 0 auto;
 
@@ -52,11 +52,17 @@ body {
 .header {
   display: flex;
   flex-direction: column;
+  height: 5rem;
+  width: 100%;
+
+
+
 
   z-index: 10000;
-  position: relative;
-  padding-top: 2%;
-  background-color: #FFFBFF;
+  position: fixed;
+  padding-top: 4%;
+
+
 
 }
 
@@ -66,6 +72,7 @@ body {
 
 .Content {
   position: relative;
+  padding-top: 15rem;
 
 }
 
@@ -91,6 +98,10 @@ body {
 
 }
 
+.notActiveSection {
+  display: none;
+}
+
 
 
 
@@ -106,19 +117,11 @@ body {
 
 
   #root {
-    background-color: white;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 7rem 1fr 48vh;
-    height: 100%;
-    width: 100%;
-    margin: 0 auto;
 
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-    position: relative;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
   }
+
 
 
 
@@ -136,18 +139,11 @@ body {
   }
 
   #root {
-    background-color: white;
-    display: grid;
-    grid-template-columns: minmax(0, 100%);
-    grid-template-rows: 7rem 1fr 48vh;
-    height: 100%;
-    width: 100%;
-    margin: 0 auto;
 
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-    position: relative;
+
+    grid-template-columns: minmax(0, 100%);
+    grid-template-rows: 1fr;
+
   }
 
 

@@ -21,9 +21,10 @@ function Nav({ setActive, active }) {
                             <hr className={active === 'Home' ? styles.activeNavUnderline : styles.notActiveUnderline} />
                         </div>
 
-                        <div className={active === "About" ? styles.activeNav : styles.notActiveNav}>
+                        <div className={active === "Product" ? styles.activeNav : styles.notActiveNav}>
 
-                            <h1 onClick={(e) => { e.preventDefault(); document.getElementById("product").scrollIntoView({ behavior: "smooth" }); }} >Product</h1>
+                            <h1 onClick={(e) => { e.preventDefault(); setActive('Product') }} >Product</h1>
+                            <hr className={active === 'Product' ? styles.activeNavUnderline : styles.notActiveUnderline} />
                         </div>
                         <div className={active === 'Potfolio' ? styles.activeNav : styles.notActiveNav}>
                             <h1><a href="portfolio-Hajira-compressed.pdf" download>Portfolio</a></h1>
@@ -85,9 +86,10 @@ function Nav({ setActive, active }) {
 
                         </div>
 
-                        <div className={active === "About" ? styles.activeNav : styles.notActiveNav}>
+
+                        <div className={active === "Product" ? styles.activeNav : styles.notActiveNav}>
                             <i className="ri-shopping-cart-2-line"></i>
-                            <h1 onClick={(e) => { e.preventDefault(); document.getElementById("product").scrollIntoView({ behavior: "smooth" }); setHamburger(false); }} >Product</h1>
+                            <h1 onClick={(e) => { e.preventDefault(); setActive('Product') }} >Product</h1>
                         </div>
                         <div className={active === 'Potfolio' ? styles.activeNav : styles.notActiveNav}>
                             <i className="ri-file-2-fill"></i>
