@@ -125,13 +125,7 @@ function App() {
           <Product />
         </div>
 
-        <div className={paymentActive === 'PaymentSuccess' ? 'activeSection' : 'notActiveSection'}>
-          <PaymentSuccess setPaymentActive={setPaymentActive} />
-        </div>
 
-        <div className={paymentActive === 'PaymentCancel' ? 'activeSection' : 'notActiveSection'}>
-          <PaymentCancel setPaymentActive={setPaymentActive} />
-        </div>
 
 
 
@@ -139,6 +133,14 @@ function App() {
       <div className="footer">
         <Footer setActive={setActive} active={active} />
 
+      </div>
+
+      <div className={paymentActive === 'PaymentSuccess' ? 'activeSection' : 'notActiveSection'}>
+        <PaymentSuccess setPaymentActive={setPaymentActive} />
+      </div>
+
+      <div className={paymentActive === 'PaymentCancel' ? 'activeSection' : 'notActiveSection'}>
+        <PaymentCancel setPaymentActive={setPaymentActive} />
       </div>
 
 
