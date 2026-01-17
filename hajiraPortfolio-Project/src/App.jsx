@@ -15,7 +15,7 @@ function App() {
 
 
   const [active, setActive] = useState('Home');
-  const [paymentStatus, setPaymentStatus] = useState(null);
+  const [paymentActive, setPaymentActive] = useState(null);
   const [isVisible, setIsVisible] = useState(true);
 
 
@@ -26,19 +26,12 @@ function App() {
 
 
 
-  // Detect ?payment=success or ?payment=cancel 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    const status = params.get("payment");
-    if (status === "success") setPaymentStatus("success");
-    if (status === "cancel") setPaymentStatus("cancel");
-
-    // Remove the query from URL after showing banner 
-    if (status) {
-      const cleanUrl = window.location.origin + window.location.pathname;
-      window.history.replaceState({}, "", cleanUrl);
-    }
-  }, [paymentStatus]);
+    const payment = params.get("payment");
+    if (payment === "success") setPaymentActive("PaymentSuccess");
+    if (payment === "cancel") setPaymentActive("PaymentCancel");
+  }, []);
 
 
   let lastScrollTop = 0;
@@ -132,12 +125,12 @@ function App() {
           <Product />
         </div>
 
-        <div className={paymentStatus === 'PaymentSuccess' ? 'activeSection' : 'notActiveSection'}>
-          <PaymentSuccess setPaymentStatus={setPaymentStatus} />
+        <div className={paymentActive === 'PaymentSuccess' ? 'activeSection' : 'notActiveSection'}>
+          <PaymentSuccess setPaymentActive={setPaymentActive} />
         </div>
 
-        <div className={paymentStatus === 'PaymentCancel' ? 'activeSection' : 'notActiveSection'}>
-          <PaymentCancel setPaymentStatus={setPaymentStatus} />
+        <div className={paymentActive === 'PaymentCancel' ? 'activeSection' : 'notActiveSection'}>
+          <PaymentCancel setPaymentActive={setPaymentActive} />
         </div>
 
 
