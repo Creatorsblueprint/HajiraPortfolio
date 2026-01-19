@@ -1,62 +1,67 @@
-@keyframes fadeInRight{
-    0%{
+@keyframes fadeInRight {
+    0% {
         opacity: 0;
         transform: translateX(-100px);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: translateX(0px);
     }
 }
 
-@keyframes fadeInLeft{
-    0%{
+@keyframes fadeInLeft {
+    0% {
         opacity: 0;
         transform: translateX(100px);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: translateX(0px);
     }
 }
 
 
-@keyframes fadeInDown{
-    0%{
+@keyframes fadeInDown {
+    0% {
         opacity: 0;
         transform: translatey(-30px);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: translatey(0px);
     }
 }
 
-@keyframes fadeInTop{
-    0%{
+@keyframes fadeInTop {
+    0% {
         opacity: 0;
         transform: translateY(50px);
     }
-    100%{
+
+    100% {
         opacity: 1;
-         transform: translateY( 0px);
+        transform: translateY(0px);
     }
 }
 
 
-@keyframes fadeIn{
-    0%{
+@keyframes fadeIn {
+    0% {
         opacity: 0;
-       
+
     }
-    100%{
+
+    100% {
         opacity: 1;
-        
+
     }
 }
 
-.aboutSection{
-    background-color: #FFFBFF ;
+.aboutSection {
+    background-color: #FFFBFF;
     position: relative;
     display: grid;
     height: 100%;
@@ -65,24 +70,24 @@
 
 }
 
-.aboutContainer{
+.aboutContainer {
     display: grid;
     grid-template-columns: 30rem auto;
     grid-template-rows: auto;
     margin: 0 auto;
     justify-items: center;
-    
+
     height: 100%;
     position: relative;
     gap: 20%;
-    
-   
-    
+
+
+
 }
 
 
 
-.aboutContainer .section1{
+.aboutContainer .section1 {
     grid-column: 1;
     position: relative;
     display: grid;
@@ -91,7 +96,7 @@
 }
 
 
-.aboutContainer .scrollMore{
+.aboutContainer .scrollMore {
     position: absolute;
     bottom: 0%;
     right: 0%;
@@ -99,16 +104,16 @@
     flex-direction: row;
     align-items: center;
     gap: 2px;
-    opacity: 0 ;
+    opacity: 0;
     animation: fadeIn 0.8s forwards;
     animation-delay: 2s;
 
 }
 
-.aboutContainer .scrollMore p{
+.aboutContainer .scrollMore p {
     font-size: 1rem;
     letter-spacing: 2px;
-    color: #D5D5D5 ;
+    color: #D5D5D5;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
@@ -116,14 +121,14 @@
 }
 
 
-.aboutContainer .scrollMore i{
-    color: #B4B4B4 ;
+.aboutContainer .scrollMore i {
+    color: #B4B4B4;
 
 }
 
 
 
-.aboutContainer .section1 .title{
+.aboutContainer .section1 .title {
     position: relative;
     bottom: 2rem;
     margin: 0;
@@ -131,7 +136,7 @@
 }
 
 
-.aboutContainer .section1 .title h1:nth-child(1){
+.aboutContainer .section1 .title h1:nth-child(1) {
     font-size: 10rem;
     letter-spacing: 12px;
     font-family: "Italiana", sans-serif;
@@ -139,13 +144,13 @@
     font-style: normal;
     opacity: 0;
     animation: 0.4s fadeInRight forwards;
-    
+
 }
 
 
-.aboutContainer .section1 .title h1:nth-child(2){
+.aboutContainer .section1 .title h1:nth-child(2) {
     font-size: 10rem;
-    
+
     font-family: "Italianno", cursive;
     color: #FF77CD;
     letter-spacing: 12px;
@@ -155,7 +160,7 @@
     opacity: 0;
     animation: 0.4s fadeInDown forwards;
     animation-delay: 0.3s;
-    
+
 
 }
 
@@ -163,27 +168,27 @@
 
 
 
-.aboutContainer .section1 .userIMGContainer .user{
+.aboutContainer .section1 .userIMGContainer .user {
     width: 100%;
     height: 100%;
     position: relative;
     padding-left: 20%;
-   
-    
+
+
 
 }
 
 
-.aboutContainer .section1 .userIMGContainer .user img{
-   
-    
+.aboutContainer .section1 .userIMGContainer .user img {
+
+
     height: 40rem;
-    
-    
-    
+
+
+
     object-fit: cover;
     position: relative;
-    z-index: 1000;
+    z-index: 100;
     opacity: 0;
     animation: 0.8s fadeInTop forwards;
     animation-delay: 0.5s;
@@ -191,7 +196,7 @@
 
 
 
-.aboutContainer .section1 .userIMGContainer .socialIcons{
+.aboutContainer .section1 .userIMGContainer .socialIcons {
     position: absolute;
     left: 10%;
     animation: fadeInTop 0.6s forwards;
@@ -200,7 +205,7 @@
 }
 
 
-.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(1){
+.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(1) {
     width: 2.2rem;
     height: 2.2rem;
     object-fit: cover;
@@ -213,7 +218,7 @@
 }
 
 
-.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(2){
+.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(2) {
     width: 2.2rem;
     height: 2.2rem;
 
@@ -226,7 +231,7 @@
 
 
 
-.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(3){
+.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(3) {
     width: 2.2rem;
     height: 2.2rem;
     object-fit: cover;
@@ -238,7 +243,7 @@
 }
 
 
-.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(4){
+.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(4) {
     width: 2.2rem;
     height: 2.2rem;
     object-fit: cover;
@@ -251,7 +256,7 @@
 }
 
 
-.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(5){
+.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(5) {
     width: 2.2rem;
     height: 2.2rem;
     object-fit: cover;
@@ -259,11 +264,11 @@
     bottom: 10rem;
     left: 0rem;
     animation-delay: 0.4s;
-    
+
 }
 
 
-.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(6){
+.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(6) {
     width: 2.2rem;
     height: 2.2rem;
     object-fit: cover;
@@ -275,7 +280,7 @@
 }
 
 
-.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(7){
+.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(7) {
     width: 2.2rem;
     height: 2.2rem;
     object-fit: cover;
@@ -284,11 +289,11 @@
     left: -1rem;
     transform: rotate(-30deg);
     animation-delay: 0.6s;
-    
+
 }
 
 
-.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(8){
+.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(8) {
     width: 2.2rem;
     height: 2.2rem;
     object-fit: cover;
@@ -297,13 +302,13 @@
     left: 27rem;
     transform: rotate(5deg);
     animation-delay: 0.7s;
-    
+
 
 }
 
 
 
-.aboutContainer .section2{
+.aboutContainer .section2 {
     grid-column: 2;
     position: relative;
     top: 2%;
@@ -316,7 +321,7 @@
 
 
 
-.aboutContainer .section2 .descriptionContainer p:nth-child(1){
+.aboutContainer .section2 .descriptionContainer p:nth-child(1) {
     width: 45rem;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -324,11 +329,11 @@
     font-size: 1.6rem;
     font-style: normal;
     color: #FF77CD;
-    
+
 }
 
 
-.aboutContainer .section2 .descriptionContainer p:nth-child(2){
+.aboutContainer .section2 .descriptionContainer p:nth-child(2) {
     width: 45rem;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -337,12 +342,12 @@
     font-style: normal;
     letter-spacing: 2px;
     color: #D37DB3;
-    
+
 }
 
 
 
-.aboutContainer .section2 .statsCard{
+.aboutContainer .section2 .statsCard {
     display: grid;
     grid-template-columns: repeat(2, 2fr);
     grid-template-rows: repeat(2, 2fr);
@@ -355,12 +360,12 @@
     border: none;
     border-radius: 20px;
     box-shadow: 5px 5px 5px #F2EEEE;
-   
+
 
 }
 
 
-.aboutContainer .section2 .statsCard h1{
+.aboutContainer .section2 .statsCard h1 {
     color: #FF77CD;
     font-family: "Istok Web", sans-serif;
     font-weight: 700;
@@ -371,7 +376,7 @@
 
 
 
-.aboutContainer .section2 .statsCard p{
+.aboutContainer .section2 .statsCard p {
     color: #D28CB8;
     font-size: 1rem;
     letter-spacing: 1.5px;
@@ -382,9 +387,9 @@
 }
 
 
-.aboutContainer .section2 .statsCard .stat1{
+.aboutContainer .section2 .statsCard .stat1 {
     grid-area: 1/1;
-    background-color: #FFF0F8 ;
+    background-color: #FFF0F8;
     border-radius: 16px;
     padding: 1rem;
     opacity: 0;
@@ -392,9 +397,9 @@
     animation-delay: 0.4s;
 }
 
-.aboutContainer .section2 .statsCard .stat2{
+.aboutContainer .section2 .statsCard .stat2 {
     grid-area: 1/2;
-    background-color: #FFF0F8 ;
+    background-color: #FFF0F8;
     border-radius: 16px;
     padding: 1rem;
     opacity: 0;
@@ -403,9 +408,9 @@
 }
 
 
-.aboutContainer .section2 .statsCard .stat3{
+.aboutContainer .section2 .statsCard .stat3 {
     grid-area: 2/1;
-    background-color: #FFF0F8 ;
+    background-color: #FFF0F8;
     border-radius: 16px;
     padding: 1rem;
     opacity: 0;
@@ -414,9 +419,9 @@
 }
 
 
-.aboutContainer .section2 .statsCard .stat4{
+.aboutContainer .section2 .statsCard .stat4 {
     grid-area: 2/2;
-    background-color: #FFF0F8 ;
+    background-color: #FFF0F8;
     border-radius: 16px;
     padding: 1rem;
     opacity: 0;
@@ -429,36 +434,36 @@
 
 @media (max-width: 767px) {
 
-    .aboutSection{
+    .aboutSection {
         grid-template-columns: minmax(0, 100%);
         width: 100%;
         height: 100%;
         padding-top: 5%;
         padding-bottom: 10%;
-        
+
 
     }
 
-    .aboutSection .aboutContainer{
+    .aboutSection .aboutContainer {
         grid-template-columns: minmax(0, 100%);
         grid-template-rows: repeat(1, 2fr);
         width: 90%;
         gap: 0;
-        
+
 
     }
 
-    .aboutSection .aboutContainer .section1{
+    .aboutSection .aboutContainer .section1 {
         grid-area: 1/1;
         grid-template-columns: 1fr;
         grid-template-rows: 4rem auto;
         width: 100%;
-        
-      
+
+
     }
 
-    
-    .aboutContainer .scrollMore{
+
+    .aboutContainer .scrollMore {
         position: absolute;
         top: -17%;
         left: 0%;
@@ -466,35 +471,35 @@
         flex-direction: row;
         align-items: center;
         gap: 2px;
-        opacity: 0 ;
+        opacity: 0;
         animation: fadeIn 0.8s forwards;
         animation-delay: 2s;
 
-}
+    }
 
-    
+
     .aboutSection .aboutContainer .section1 .title {
         bottom: 0;
         grid-row: 1;
     }
 
-    
-    .aboutSection .aboutContainer .section1 .title h1{
-        font-size: 9.5rem ;
-     
+
+    .aboutSection .aboutContainer .section1 .title h1 {
+        font-size: 9.5rem;
+
     }
 
-    
-    .aboutSection .aboutContainer .section1 .userIMGContainer{
+
+    .aboutSection .aboutContainer .section1 .userIMGContainer {
         grid-row: 2;
         position: relative;
-        
+
     }
 
 
-    
-    .aboutSection .aboutContainer .section1 .userIMGContainer .user img{
-        
+
+    .aboutSection .aboutContainer .section1 .userIMGContainer .user img {
+
         height: 39rem;
         width: 30rem;
         padding-left: 4rem;
@@ -502,14 +507,14 @@
     }
 
 
-    
-    
-    .aboutSection .aboutContainer .section1 .userIMGContainer .socialIcons{
+
+
+    .aboutSection .aboutContainer .section1 .userIMGContainer .socialIcons {
         left: 0;
     }
 
-    
-    .aboutSection .aboutContainer .section2{
+
+    .aboutSection .aboutContainer .section2 {
         grid-area: 2/1;
         display: grid;
         grid-template-columns: 1fr;
@@ -518,123 +523,124 @@
         right: 0;
     }
 
-    
-    .aboutSection .aboutContainer .section2 .descriptionContainer{
+
+    .aboutSection .aboutContainer .section2 .descriptionContainer {
         grid-row: 2;
-        
+
 
     }
 
-    
-    .aboutSection .aboutContainer .section2 .descriptionContainer p{
+
+    .aboutSection .aboutContainer .section2 .descriptionContainer p {
         width: 100%;
-        
+
 
     }
 
-    .aboutSection .aboutContainer .section2 .descriptionContainer p:nth-child(1){
-        font-size: 1.8rem ;
-        
+    .aboutSection .aboutContainer .section2 .descriptionContainer p:nth-child(1) {
+        font-size: 1.8rem;
+
 
     }
 
-    
-    .aboutSection .aboutContainer .section2 .descriptionContainer p:nth-child(2){
-        font-size: 1.2rem ;
+
+    .aboutSection .aboutContainer .section2 .descriptionContainer p:nth-child(2) {
+        font-size: 1.2rem;
         font-weight: 300;
-        
+
 
     }
 
-    
-
-.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(1){
-    width: 2.3rem;
-    height: 2.3rem;
-    left: 5rem;
-    bottom: 20rem;
-    transform: rotate(30deg);
 
 
-
-}
-
-
-.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(2){
-    width: 2.3rem;
-    height: 2.3rem;
-   
-    bottom: 30rem;
-    left: 30rem;
-    transform: rotate(-10deg);
-}
+    .aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(1) {
+        width: 2.3rem;
+        height: 2.3rem;
+        left: 5rem;
+        bottom: 20rem;
+        transform: rotate(30deg);
 
 
 
-.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(3){
-    width: 2.3rem;
-    height: 2.3rem;
-   
-    bottom: 20rem;
-    left: 10rem;
-    transform: rotate(-5deg);
-   
-
-}
-.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(4){
-    width: 2.3rem;
-    height: 2.3rem;
-   
-    bottom: 10rem;
-    left: 4rem;
-    transform: rotate(-20deg);
-}
+    }
 
 
-.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(5){
-    width: 2.3rem;
-    height: 2.3rem;
-    
-    bottom: 35rem;
-    left: 31rem;
-    transform: rotate(10deg);
-    
-    
-}
+    .aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(2) {
+        width: 2.3rem;
+        height: 2.3rem;
+
+        bottom: 30rem;
+        left: 30rem;
+        transform: rotate(-10deg);
+    }
 
 
-.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(6){
-    width: 2.3rem;
-    height: 2.3rem;
-    
-    bottom: 2rem;
-    left: 7rem;
-    transform: rotate(-10deg);
-    
-}
+
+    .aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(3) {
+        width: 2.3rem;
+        height: 2.3rem;
+
+        bottom: 20rem;
+        left: 10rem;
+        transform: rotate(-5deg);
 
 
-.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(7){
-    width: 2.3rem;
-    height: 2.3rem;
-    bottom: 28rem;
-    left: 16rem;
-    transform: rotate(-15deg);
-}
+    }
+
+    .aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(4) {
+        width: 2.3rem;
+        height: 2.3rem;
+
+        bottom: 10rem;
+        left: 4rem;
+        transform: rotate(-20deg);
+    }
 
 
-.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(8){
-    width: 2.3rem;
-    height: 2.3rem;
-    bottom: 12rem;
-    left: 11rem;
-    transform: rotate(-20deg);
-    
-    
+    .aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(5) {
+        width: 2.3rem;
+        height: 2.3rem;
 
-}
+        bottom: 35rem;
+        left: 31rem;
+        transform: rotate(10deg);
 
-    
+
+    }
+
+
+    .aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(6) {
+        width: 2.3rem;
+        height: 2.3rem;
+
+        bottom: 2rem;
+        left: 7rem;
+        transform: rotate(-10deg);
+
+    }
+
+
+    .aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(7) {
+        width: 2.3rem;
+        height: 2.3rem;
+        bottom: 28rem;
+        left: 16rem;
+        transform: rotate(-15deg);
+    }
+
+
+    .aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(8) {
+        width: 2.3rem;
+        height: 2.3rem;
+        bottom: 12rem;
+        left: 11rem;
+        transform: rotate(-20deg);
+
+
+
+    }
+
+
 
 
 }
@@ -643,37 +649,37 @@
 
 @media (min-width: 768px) and (max-width: 1023px) {
 
-    
-    .aboutSection{
+
+    .aboutSection {
         grid-template-columns: minmax(0, 100%);
         width: 100%;
         height: 100%;
-       
+
         padding-bottom: 10%;
-        
+
 
     }
 
-    .aboutSection .aboutContainer{
+    .aboutSection .aboutContainer {
         grid-template-columns: minmax(0, 100%);
         grid-template-rows: repeat(1, 2fr);
         width: 90%;
         gap: 0;
-        
+
 
     }
 
-    .aboutSection .aboutContainer .section1{
+    .aboutSection .aboutContainer .section1 {
         grid-area: 1/1;
         grid-template-columns: 1fr;
         grid-template-rows: 10rem auto;
         width: 100%;
-        
-      
+
+
     }
 
-    
-    .aboutContainer .scrollMore{
+
+    .aboutContainer .scrollMore {
         position: absolute;
         top: -17%;
         left: 0%;
@@ -681,50 +687,50 @@
         flex-direction: row;
         align-items: center;
         gap: 2px;
-        opacity: 0 ;
+        opacity: 0;
         animation: fadeIn 0.8s forwards;
         animation-delay: 2s;
 
-}
+    }
 
-    
+
     .aboutSection .aboutContainer .section1 .title {
         bottom: 0;
         grid-row: 1;
     }
 
-    
-    .aboutSection .aboutContainer .section1 .title h1{
-        font-size: 15rem ;
-     
+
+    .aboutSection .aboutContainer .section1 .title h1 {
+        font-size: 15rem;
+
     }
 
-    
-    .aboutSection .aboutContainer .section1 .userIMGContainer{
+
+    .aboutSection .aboutContainer .section1 .userIMGContainer {
         grid-row: 2;
         position: relative;
-        
+
     }
 
 
-    
-    .aboutSection .aboutContainer .section1 .userIMGContainer .user img{
-        
+
+    .aboutSection .aboutContainer .section1 .userIMGContainer .user img {
+
         height: 78rem;
         padding-left: 3rem;
 
     }
 
 
-    
-    
-    .aboutSection .aboutContainer .section1 .userIMGContainer .socialIcons{
+
+
+    .aboutSection .aboutContainer .section1 .userIMGContainer .socialIcons {
         left: 0;
         bottom: 20%;
     }
 
-    
-    .aboutSection .aboutContainer .section2{
+
+    .aboutSection .aboutContainer .section2 {
         grid-area: 2/1;
         display: grid;
         grid-template-columns: 1fr;
@@ -733,174 +739,175 @@
         right: 0;
     }
 
-    
-    .aboutSection .aboutContainer .section2 .descriptionContainer{
+
+    .aboutSection .aboutContainer .section2 .descriptionContainer {
         grid-row: 2;
-        
+
 
     }
 
-    
-    .aboutSection .aboutContainer .section2 .descriptionContainer p{
+
+    .aboutSection .aboutContainer .section2 .descriptionContainer p {
         width: 100%;
-        
+
 
     }
 
-    .aboutSection .aboutContainer .section2 .descriptionContainer p:nth-child(1){
-        font-size: 1.8rem ;
-        
+    .aboutSection .aboutContainer .section2 .descriptionContainer p:nth-child(1) {
+        font-size: 1.8rem;
+
 
     }
 
-    
-    .aboutSection .aboutContainer .section2 .descriptionContainer p:nth-child(2){
-        font-size: 1.2rem ;
+
+    .aboutSection .aboutContainer .section2 .descriptionContainer p:nth-child(2) {
+        font-size: 1.2rem;
         font-weight: 300;
-        
+
 
     }
 
-    
-
-.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(1){
-    width: 5rem;
-    height: 5rem;
-    left: 1rem;
-    bottom: 35rem;
-    transform: rotate(30deg);
 
 
-
-}
-
-
-.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(2){
-    width: 5rem;
-    height: 5rem;
-   
-    bottom: 50rem;
-    left: 52rem;
-    transform: rotate(-10deg);
-}
+    .aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(1) {
+        width: 5rem;
+        height: 5rem;
+        left: 1rem;
+        bottom: 35rem;
+        transform: rotate(30deg);
 
 
 
-.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(3){
-    width: 5rem;
-    height: 5rem;
-   
-    bottom: 30rem;
-    left: 24rem;
-    transform: rotate(20deg);
-   
-
-}
-.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(4){
-    width: 5rem;
-    height: 5rem;
-   
-    bottom: 10rem;
-    left: 1rem;
-    transform: rotate(-20deg);
-}
+    }
 
 
-.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(5){
-    width: 5rem;
-    height: 5rem;
-    
-    bottom: 36rem;
-    left: 52rem;
-    transform: rotate(10deg);
-    
-    
-}
+    .aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(2) {
+        width: 5rem;
+        height: 5rem;
+
+        bottom: 50rem;
+        left: 52rem;
+        transform: rotate(-10deg);
+    }
 
 
-.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(6){
-    width: 5rem;
-    height: 5rem;
-    
-    bottom: 0rem;
-    left: 7rem;
-    transform: rotate(-10deg);
-    
-}
+
+    .aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(3) {
+        width: 5rem;
+        height: 5rem;
+
+        bottom: 30rem;
+        left: 24rem;
+        transform: rotate(20deg);
 
 
-.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(7){
-     width: 5rem;
-    height: 5rem;
-    bottom: 45rem;
-    left: 24rem;
-    transform: rotate(-15deg);
-}
+    }
+
+    .aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(4) {
+        width: 5rem;
+        height: 5rem;
+
+        bottom: 10rem;
+        left: 1rem;
+        transform: rotate(-20deg);
+    }
 
 
-.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(8){
-    width: 5rem;
-    height: 5rem;
-    bottom: 20rem;
-    left: 11rem;
-    transform: rotate(-20deg);
-    
-    
+    .aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(5) {
+        width: 5rem;
+        height: 5rem;
 
-}
+        bottom: 36rem;
+        left: 52rem;
+        transform: rotate(10deg);
 
- .aboutContainer .scrollMore{
+
+    }
+
+
+    .aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(6) {
+        width: 5rem;
+        height: 5rem;
+
+        bottom: 0rem;
+        left: 7rem;
+        transform: rotate(-10deg);
+
+    }
+
+
+    .aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(7) {
+        width: 5rem;
+        height: 5rem;
+        bottom: 45rem;
+        left: 24rem;
+        transform: rotate(-15deg);
+    }
+
+
+    .aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(8) {
+        width: 5rem;
+        height: 5rem;
+        bottom: 20rem;
+        left: 11rem;
+        transform: rotate(-20deg);
+
+
+
+    }
+
+    .aboutContainer .scrollMore {
         position: absolute;
         top: 16%;
         left: 0%;
-      
-
-}
 
 
- .aboutContainer .scrollMore p{
+    }
+
+
+    .aboutContainer .scrollMore p {
         font-size: 1.4rem;
-      
 
-}
-
-
-
-
-
-
-.aboutContainer .section2 .statsCard h1{
-  
-    font-size: 4rem;
-  
-}
-
-
-
-.aboutContainer .section2 .statsCard p{
-   
-    font-size: 1.5rem;
-  
-}
-
-
-    .aboutSection .aboutContainer .section2 .descriptionContainer p:nth-child(1){
-        font-size: 2.4rem ;
-        
 
     }
 
-    
-    .aboutSection .aboutContainer .section2 .descriptionContainer p:nth-child(2){
-        font-size: 1.5rem ;
+
+
+
+
+
+    .aboutContainer .section2 .statsCard h1 {
+
+        font-size: 4rem;
+
+    }
+
+
+
+    .aboutContainer .section2 .statsCard p {
+
+        font-size: 1.5rem;
+
+    }
+
+
+    .aboutSection .aboutContainer .section2 .descriptionContainer p:nth-child(1) {
+        font-size: 2.4rem;
+
+
+    }
+
+
+    .aboutSection .aboutContainer .section2 .descriptionContainer p:nth-child(2) {
+        font-size: 1.5rem;
         font-weight: 300;
-        
+
 
     }
 
 
 
-    
+
 
 
 
@@ -909,87 +916,88 @@
 
 
 @media (min-width: 1024px) and (max-width: 1280px) {
-    .aboutSection .aboutContainer{
+    .aboutSection .aboutContainer {
         gap: 10%;
     }
 
-    .aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(1){
+    .aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(1) {
 
-    left: 7rem;
-    bottom: 25rem;
-    transform: rotate(30deg);
-
-
-
-}
-
-
-.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(2){
-    
-   
-    bottom: 30rem;
-    left: 20rem;
-    transform: rotate(-10deg);
-}
+        left: 7rem;
+        bottom: 25rem;
+        transform: rotate(30deg);
 
 
 
-.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(3){
-   
-   
-    bottom: 4rem;
-    left: 28rem;
-    transform: rotate(20deg);
-   
-
-}
-.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(4){
- 
-   
-    bottom: 10rem;
-    left: 1rem;
-    transform: rotate(-20deg);
-}
+    }
 
 
-.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(5){
-   
-    
-    bottom: 27rem;
-    left: 26rem;
-    transform: rotate(10deg);
-    
-    
-}
+    .aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(2) {
 
 
-.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(6){
-
-    
-    bottom: 0rem;
-    left: 7rem;
-    transform: rotate(-10deg);
-    
-}
+        bottom: 30rem;
+        left: 20rem;
+        transform: rotate(-10deg);
+    }
 
 
-.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(7){
-    
-    bottom: 35rem;
-    left: 24rem;
-    transform: rotate(-15deg);
-}
+
+    .aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(3) {
 
 
-.aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(8){
-    
-    bottom: 25rem;
-    left: 1rem;
-    transform: rotate(-20deg);
-    
-    
+        bottom: 4rem;
+        left: 28rem;
+        transform: rotate(20deg);
 
-}
+
+    }
+
+    .aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(4) {
+
+
+        bottom: 10rem;
+        left: 1rem;
+        transform: rotate(-20deg);
+    }
+
+
+    .aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(5) {
+
+
+        bottom: 27rem;
+        left: 26rem;
+        transform: rotate(10deg);
+
+
+    }
+
+
+    .aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(6) {
+
+
+        bottom: 0rem;
+        left: 7rem;
+        transform: rotate(-10deg);
+
+    }
+
+
+    .aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(7) {
+
+        bottom: 35rem;
+        left: 24rem;
+        transform: rotate(-15deg);
+    }
+
+
+    .aboutContainer .section1 .userIMGContainer .socialIcons img:nth-child(8) {
+
+        bottom: 25rem;
+        left: 1rem;
+        transform: rotate(-20deg);
+
+
+
+    }
 
 
 }

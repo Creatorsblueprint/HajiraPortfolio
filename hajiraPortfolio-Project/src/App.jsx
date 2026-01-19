@@ -5,26 +5,21 @@ import Footer from "./Footer/Footer.jsx";
 import PaymentSuccess from "./paymentPopups/PaymentSuccess.jsx";
 import PaymentCancel from "./paymentPopups/PaymentCancel.jsx";
 import Product from "./Product/Product.jsx";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 
 
 function App() {
-
-
-
-  const [active, setActive] = useState('Home');
-  const [paymentActive, setPaymentActive] = useState(null);
   const [isVisible, setIsVisible] = useState(true);
-
+  const [paymentActive, setPaymentActive] = useState(null);
+  const location = useLocation();
+  const lastScrollTop = useRef(0);
 
   useEffect(() => {
-    window.scrollTo(0, 0)
-
-  }, [active])
-
-
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -33,106 +28,70 @@ function App() {
     if (payment === "cancel") setPaymentActive("PaymentCancel");
   }, []);
 
-
-  let lastScrollTop = 0;
-
-
   useEffect(() => {
-
-    const container = document.getElementById("root");
-    console.log(container)
-
-
-
-
-
-
-    const isScrolling = (event) => {
-
-
-
-
-
-
-
-
-      let currentScrollTop = event.target.scrollTop;
-
-      // if currentScroll top is greater that last know scroll top postion set nav as visible else hidden
-      if (currentScrollTop > lastScrollTop) {
-        setIsVisible(false);
-        console.log("hidden", currentScrollTop)
-
-      } else if (currentScrollTop < lastScrollTop) {
+    const isScrolling = () => {
+      if (window.innerWidth <= 768) {
         setIsVisible(true);
-        console.log("visible", currentScrollTop)
-
+        return;
       }
-
-      // update lastScrollTop to currentscrll top 
-      lastScrollTop = currentScrollTop;
-
-    }
-
-
-
-
+      const currentScrollTop = window.scrollY;
+      if (currentScrollTop > lastScrollTop.current && currentScrollTop > 50) {
+        setIsVisible(false);
+      } else if (currentScrollTop < lastScrollTop.current) {
+        setIsVisible(true);
+      }
+      lastScrollTop.current = currentScrollTop <= 0 ? 0 : currentScrollTop;
+    };
 
     window.addEventListener('scroll', isScrolling);
-
     return () => {
       window.removeEventListener('scroll', isScrolling);
+    };
+  }, []);
 
-
-    }
-
-  }, [lastScrollTop]); // rune everytime isvisbile changes 
-
+  // Map pathname to 'active' string for compatibility with existing components if needed, 
+  // though it's better to update components to use NavLink. 
+  // For now, let's assume we will update Nav/Footer to use React Router's hooks or NavLink.
+  // But to be safe, let's derive 'active' for now.
+  let active = 'Home';
+  if (location.pathname === '/product') active = 'Product';
 
   return (
     <>
-
-
       <AnimatePresence>
         <motion.div
-          key={isVisible}
-          initial={{ opacity: 0, y: -60 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -60 }}
+          initial="hidden"
+          animate={isVisible ? "visible" : "hidden"}
+          variants={{
+            visible: { opacity: 1, y: 0 },
+            hidden: { opacity: 0, y: -100 }
+          }}
           transition={{ duration: 0.4, ease: 'easeInOut' }}
-          className={isVisible === true ? "header" : "headerHidden"}
+          className="header"
+          style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000 }}
         >
-          <Nav setActive={setActive} active={active} />
-
+          <Nav active={active} />
         </motion.div>
       </AnimatePresence>
 
-
-
-
-
-
       <div className="Content">
-        <div className={active === 'Home' ? 'activeSection' : 'notActive'}>
-          <About />
-
-          <Home active={active} />
-
-
-
-        </div>
-        <div className={active === 'Product' ? 'activeSection' : 'notActive'}>
-          <Product />
-        </div>
-
-
-
-
-
+        <Routes>
+          <Route path="/" element={
+            <div className="activeSection">
+              <About />
+              <Home />
+            </div>
+          } />
+          <Route path="/product" element={
+            <div className="activeSection">
+              <Product />
+            </div>
+          } />
+        </Routes>
       </div>
-      <div className="footer">
-        <Footer setActive={setActive} active={active} />
 
+      <div className="footer">
+        <Footer active={active} />
       </div>
 
       <div className={paymentActive === 'PaymentSuccess' ? 'activeSection' : 'notActiveSection'}>
@@ -142,10 +101,6 @@ function App() {
       <div className={paymentActive === 'PaymentCancel' ? 'activeSection' : 'notActiveSection'}>
         <PaymentCancel setPaymentActive={setPaymentActive} />
       </div>
-
-
-
-
     </>
   )
 }

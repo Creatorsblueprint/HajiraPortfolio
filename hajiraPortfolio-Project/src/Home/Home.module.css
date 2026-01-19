@@ -465,7 +465,7 @@
 
 .homeContainer .collaborationsSection .collaborationsContainer .contents .content1 .collabStats {
     position: relative;
-    z-index: 1000;
+    z-index: 100;
     bottom: 40%;
     display: flex;
     flex-direction: row;
@@ -541,7 +541,7 @@
 
 .homeContainer .collaborationsSection .collaborationsContainer .contents .content1 .contactButton {
     position: relative;
-    z-index: 1000;
+    z-index: 100;
     left: 16%;
     display: flex;
     flex-direction: row;

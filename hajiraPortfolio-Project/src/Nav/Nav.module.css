@@ -18,6 +18,7 @@
     justify-items: center;
     position: relative;
 
+
     width: 100%;
     height: 100%;
 
@@ -39,6 +40,7 @@
     z-index: 10000;
     animation: fadeInTop 0.4s forwards;
     width: 90%;
+    max-width: 1200px;
     padding: 0.5rem;
     opacity: 0;
 
@@ -240,7 +242,7 @@
 
     .hamburgerSection .hamburgerContainer .userTitle h1 {
 
-        font-size: 8rem;
+        font-size: 6rem;
         color: #FF77CD;
         margin: 0;
         font-family: "Inspiration", cursive;
@@ -263,15 +265,13 @@
         height: 100vh;
         width: 100%;
         position: fixed;
+        z-index: 20000;
         animation: fadeInLeft 0.3s forwards;
         top: 0%;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 22rem 30rem auto;
         margin: 0 auto;
-
-
-
     }
 
     .hamburgerMenuActive .menuContainer {
