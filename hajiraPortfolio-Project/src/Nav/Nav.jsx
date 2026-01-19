@@ -89,7 +89,7 @@ function Nav({ setActive, active }) {
 
                         <div className={active === "Product" ? styles.activeNav : styles.notActiveNav}>
                             <i className="ri-shopping-cart-2-line"></i>
-                            <h1 onClick={(e) => { e.preventDefault(); setActive('Product') }} >Product</h1>
+                            <h1 onClick={(e) => { e.preventDefault(); setActive('Product'); setHamburger('false') }} >Product</h1>
                         </div>
                         <div className={active === 'Potfolio' ? styles.activeNav : styles.notActiveNav}>
                             <i className="ri-file-2-fill"></i>
