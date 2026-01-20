@@ -114,11 +114,7 @@ function ProductSection() {
             </button>
           </div>
 
-          <div className={styles.note}>
-            <p>
-              After payment, you’ll be redirected and receive instant access to the playlist link.
-            </p>
-          </div>
+
         </motion.div>
       </div>
     </div>
