@@ -231,6 +231,14 @@
     box-shadow: 0 0 6px #ffd2f5;
 }
 
+.emailInstruction {
+    font-family: "Inter", sans-serif;
+    font-size: 0.8rem;
+    color: #d37db3;
+    margin: 0;
+    margin-top: 0.2rem;
+}
+
 
 /* Mobile */
 

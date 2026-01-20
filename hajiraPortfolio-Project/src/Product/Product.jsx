@@ -101,6 +101,7 @@ function ProductSection() {
             <label>Your Email</label>
             <input type="email" placeholder="you@example.com" value={email} onChange={(e) => handleEmail(e.target.value)}
             />
+            <p className={styles.emailInstruction}>check email for product after payment (if not there, check spam)</p>
           </div>
 
           <div className={styles.purchaseRow}>
