@@ -3,7 +3,7 @@ import styles from './paymentPage.module.css';
 
 export default function PaymentCancel({ setPaymentActive }) {
   useEffect(() => {
-    const timer = setTimeout(() => setPaymentActive(false), 2000);
+    const timer = setTimeout(() => setPaymentActive(false), 4000);
     return () => clearTimeout(timer);
   }, [setPaymentActive]);
 

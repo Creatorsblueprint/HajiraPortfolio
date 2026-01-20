@@ -11,7 +11,7 @@ export default function PaymentSuccess({ setPaymentActive }) {
     <div className={styles.overlay}>
       <div className={styles.cardSuccess}>
         <h1>Payment Successful!</h1>
-        <p>Check your email for the playlist</p>
+        <p>Check your email for the playlist (if not there, check spam)</p>
         <p>Automatically Closing Message</p>
 
       </div>
