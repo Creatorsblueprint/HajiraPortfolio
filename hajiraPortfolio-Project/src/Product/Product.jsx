@@ -11,7 +11,7 @@ function ProductSection() {
 
   const handleEmail = (email) => {
     setEmail(email);
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     setIsEmailValid(emailRegex.test(email));
   }
 
