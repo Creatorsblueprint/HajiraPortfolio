@@ -1,244 +1,144 @@
-
-
-
-.footerSection{
-    background-color: #FFD0FA;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 100%;
-    
-    margin: 0 auto;
-    
-    width: 100%;
-    height: 100%;
-    
-    overflow: hidden;
-    position: relative;
-    align-items: start;
-    
-    
-    
-
-    
+.footerSection {
+   background-color: #FFD0FA;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   padding: 4rem 0 2rem;
 }
 
-
-
-
- .footerSection .footerContainer {
-    display:grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 10rem 3rem 1fr 1fr;
-    margin: 0 auto;
-    width: 100%;
-    height: 100%;
-    
-    
-   
-    overflow: hidden;
-    align-items: center;
-    justify-items: center;
-    position: relative;
-   
-    
-   
+.footerContainer {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 3rem;
+   width: 90%;
+   max-width: 1200px;
+   margin: 0 auto;
 }
 
-
-.footerSection .footerContainer .footerHeader{
-    position: relative;
-    right: 1%;
+.footerHeader h1 {
+   font-size: 5rem;
+   color: #FF77CD;
+   margin: 0;
+   font-family: "Inspiration", cursive;
+   font-weight: 400;
+   line-height: 1;
 }
 
-.footerSection .footerContainer .footerHeader h1{
-    font-size: 5.4rem;
-    color: #FF77CD;
-    margin: 0;
-    font-family: "Inspiration", cursive;
-    font-weight: 400;
-    font-style: normal;
-    
-}
-
-
-
- .footerSection .footerContainer .footerNav{
-    display: flex;
-    flex-direction: row;
-    gap: 6rem;
-}
-
-
- 
- .footerSection .footerContainer .footerNav h1{
-    font-size: 1.4rem;
-    font-family: "Istok Web", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: white;
-    letter-spacing: 3px;
-}
-
-
- 
- .footerSection .footerContainer .footerNav h1:hover{
-    color: #f3f3f3;
-    cursor: pointer;
-
-}
-
-
- 
- .footerSection .footerContainer .footerSocials{
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    right: 1%;
-    gap: 2rem;
-}
-
-
- 
- .footerSection .footerContainer .footerSocials img{
-    width: 1.5rem;
-}
-
-
-
- .footerSection .footerContainer .footerSocials img:hover{
-   cursor: pointer;
- }
-
-
- .footerSection .footerContainer .footerLine hr{
-    width: 85rem;
-    border: 1px solid #FF60B5 ;
-
- }
-
-
-
- .footerSection .footerContainer .footerBottom{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-}
-
-
- .footerSection .footerContainer .footerBottom .footerBottomContainer{
+.footerNav {
    display: flex;
    flex-direction: row;
-   gap: 26rem;
- }
-
- .footerSection .footerContainer .footerBottom  p{
-    font-size: 1rem;
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 200;
-    font-style: normal;
-    letter-spacing: 2px;
-    color: #A4A1A1 ;
-
- }
-
- 
- .footerSection .footerContainer .footerBottom  i{
-    color: #9E9E9E ;
-
-}
- 
- .footerSection .footerContainer .footerBottom .footerCopyright{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    
+   gap: 4rem;
+   align-items: center;
 }
 
-
- .footerSection .footerContainer .footerBottom  p{
-    font-size: 1rem;
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 200;
-    font-style: normal;
-
- }
-
-
- .footerSection .footerContainer .footerBottom .Socials{
-    display: flex;
-    flex-direction: row;
-    
-    gap: 1rem;
-
+.footerNav h1 {
+   margin: 0;
+   font-size: 1rem;
 }
 
- 
- .footerSection .footerContainer .footerBottom .Socials img{
-    width: 1.2rem;
-    height: 1.2rem;
- }
+/* Default Link Styling */
+.footerNav a {
+   font-size: 1rem;
+   font-family: "Istok Web", sans-serif;
+   font-weight: 600;
+   color: white;
+   letter-spacing: 2px;
+   text-transform: uppercase;
+   text-decoration: none;
+   transition: color 0.3s ease;
+}
 
+.footerNav a:hover {
+   color: #f3f3f3;
+}
 
-  
-.footerSection .footerContainer .footerBottom .Socials img:hover{
+/* Active State Styling */
+.activeNav h1 a {
+   color: #f3f3f3;
+   opacity: 0.8;
+}
+
+.footerSocials {
+   display: flex;
+   gap: 2rem;
+   margin-top: 1rem;
+}
+
+.footerSocials img {
+   width: 1.6rem;
+   transition: transform 0.2s ease, opacity 0.2s ease;
    cursor: pointer;
- }
+}
 
+.footerSocials img:hover {
+   transform: translateY(-3px);
+}
 
+.footerBottom {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   gap: 1.5rem;
+   margin-top: 2rem;
+}
 
- 
+.footerLine hr {
+   width: 100%;
+   border: none;
+   border-top: 1px solid #FF60B5;
+   margin: 0;
+}
+
+.footerBottomContainer {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   padding: 0 1rem;
+}
+
+.footerCopyright,
+.dev {
+   display: flex;
+   align-items: center;
+   gap: 0.5rem;
+}
+
+.footerCopyright p,
+.dev p {
+   font-size: 0.85rem;
+   font-family: "Inter", sans-serif;
+   color: #A4A1A1;
+   letter-spacing: 1px;
+   margin: 0;
+}
+
+.footerCopyright i {
+   color: #9E9E9E;
+   font-size: 0.9rem;
+}
+
+/* Mobile */
 @media (max-width: 768px) {
-
-   .footerSection{
-      margin: 0 auto;
-      grid-template-columns: minmax(0, 100%);
-      width: 100%;
-      height: 100%;
+   .footerSection {
+      padding: 4rem 0 2rem;
    }
 
-   
-   .footerSection .footerContainer{
-
-      grid-template-columns: minmax(0, 100%);
-      width: 90%;
-      height: 100%;
-
-      grid-template-rows: 10rem 3rem 1fr 1fr;
+   .footerHeader h1 {
+      font-size: 4rem;
    }
 
-   
-  
-   
-
-   
-   
-   .footerSection .footerContainer .footerBottom .footerBottomContainer{
-      gap: 2rem;
-      height: 2rem;
-      align-items: center;
-      
-
+   .footerNav {
+      flex-direction: column;
+      gap: 1.5rem;
    }
 
-   
-   .footerSection .footerContainer .footerBottom .footerCopyright p{
-      white-space: nowrap;
-      font-size: 0.8rem;
+   .footerBottomContainer {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
    }
-
-   
-   .footerSection .footerContainer .footerBottom .dev p{
-      white-space: nowrap;
-      font-size: 0.8rem;
-   }
-
-   
-   .footerSection .footerContainer .footerBottom .Socials{
-      gap: 0.5rem ;
-      
-   }
-
 }
