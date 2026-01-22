@@ -106,6 +106,7 @@ function ProductSection() {
               src="Images/Product/Playlist cover.png"
               alt="Curated Spotify Playlist cover"
             />
+
           </div>
         </motion.div>
 
@@ -133,15 +134,13 @@ function ProductSection() {
           </div>
 
           <div className={styles.embed}>
-            <iframe
-              src="https://open.spotify.com/embed/playlist/4g1hScL2mbyR0VU2XZ551J"
-              width="100%"
-              height="80"
-              frameBorder="0"
-              allow="encrypted-media"
-              title="Spotify playlist preview"
-            ></iframe>
+            <img
+              src="Images/spotify/spotify.png"
+              alt="Spotify playlist preview"
+            />
           </div>
+
+
 
           <div className={styles.emailField}>
             <label>Your Email</label>

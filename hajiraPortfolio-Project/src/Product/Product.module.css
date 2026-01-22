@@ -46,12 +46,21 @@
     padding: 1.5rem;
 }
 
-.imageCard img {
+.imageCard img,
+.spotifyIframe {
     width: 100%;
     height: auto;
     display: block;
     border-radius: 18px;
     object-fit: cover;
+}
+
+.embed img {
+    border-radius: 10px;
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    display: block;
 }
 
 .infoWrapper {
@@ -96,17 +105,6 @@
     margin: 0;
 }
 
-.embed {
-    margin-top: 0.5rem;
-    background: #fff0f8;
-    border-radius: 18px;
-    padding: 1rem;
-    box-shadow: 3px 3px 6px #f2eeee;
-}
-
-.embed iframe {
-    border-radius: 10px;
-}
 
 .purchaseRow {
     margin-top: 1.5rem;
