@@ -304,6 +304,15 @@
         text-align: center;
         justify-content: center;
     }
+
+    .embed {
+        padding: 0.5rem;
+    }
+
+    .embed img {
+        height: 50px;
+        object-fit: contain;
+    }
 }
 
 /* Tablet */
