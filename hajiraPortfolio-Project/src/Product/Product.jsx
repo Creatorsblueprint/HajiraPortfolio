@@ -1,12 +1,53 @@
 import styles from "./Product.module.css";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { round } from "math"
+import { useEffect, useState, useRef } from "react";
 
 function ProductSection() {
-  const price = 19; // adjust as needed
+
+
+
 
   const [email, setEmail] = useState("");
   const [isEmailValid, setIsEmailValid] = useState(false);
+  const [code, setCode] = useState("AED");
+  const [price, setPrice] = useState(19);
+  const [symbol, setSymbol] = useState("AED");
+
+  const basePrice = 19
+  let baseRate = 1
+
+
+  const currency = [
+    { code: "AED", symbol: "AED", rate: 1 },
+    { code: "USD", symbol: "$", rate: 0.272294 },
+    { code: "EUR", symbol: "€", rate: 0.231967 },
+    { code: "GBP", symbol: "£", rate: 0.202600 },
+    { code: "SAR", symbol: "SAR", rate: 1.020980 },
+    { code: "QAR", symbol: "QAR", rate: 0.992250 },
+    { code: "BHD", symbol: "BHD", rate: 0.102649 },
+    { code: "KWD", symbol: "KWD", rate: 0.083217 },
+    { code: "OMR", symbol: "OMR", rate: 0.104819 },
+    { code: "INR", symbol: "₹", rate: 24.9477 }
+  ];
+
+  const handleRateChange = () => {
+    for (let c in currency) {
+      // if current code is equal to the set code  set base rate to the current code rate and caltue and set the price accordingyly
+      if (currency[c].code === code) {
+        baseRate = currency[c].rate
+        setPrice(basePrice * currency[c].rate);
+        setSymbol(currency[c].symbol);
+      }
+    }
+  }
+
+  useEffect(() => {
+    handleRateChange()
+
+  }, [code])
+
+
 
 
   const handleEmail = (email) => {
@@ -20,14 +61,19 @@ function ProductSection() {
 
 
     try {
+
+      let roundedPrice = round(price)
+
+
       const response = await fetch("https://hajiraportfolio-backend.onrender.com/api/create-payment-intent", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          amount: price, // backend multiplies by 100
+          amount: roundedPrice, // backend multiplies by 100
           email: email,
+          currency: code,
           successUrl: "https://lebohangdev.github.io/HajiraPortfolio/?payment=success",
           cancelUrl: "https://lebohangdev.github.io/HajiraPortfolio/?payment=cancel",
         }),
@@ -105,9 +151,27 @@ function ProductSection() {
           </div>
 
           <div className={styles.purchaseRow}>
+            <div className={styles.currencyWrapper}>
+              <span className={styles.label}>Currency</span>
+              <select
+                value={code}
+                onChange={(e) => setCode(e.target.value)}
+                className={styles.currencySelect}
+                defaultValue="AED"
+
+              >
+
+                {currency.map((currency, index) => (
+                  <option key={index} value={currency.code}>
+                    {currency.code}
+                  </option>
+                ))}
+              </select>
+            </div>
+
             <div className={styles.priceBlock}>
               <span className={styles.label}>Price</span>
-              <span className={styles.price}>AED {price}</span>
+              <span className={styles.price}>{round(price) + " " + symbol}</span>
             </div>
             <button disabled={!isEmailValid} className={styles.buyButton} onClick={() => { handleBuy() }}>
               BUY PLAYLIST
