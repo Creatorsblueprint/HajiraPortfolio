@@ -74,8 +74,8 @@ function ProductSection() {
           amount: roundedPrice, // backend multiplies by 100
           email: email,
           currency: code,
-          successUrl: "https://lebohangdev.github.io/HajiraPortfolio/#/product?payment=success",
-          cancelUrl: "https://lebohangdev.github.io/HajiraPortfolio/#/product?payment=cancel",
+          successUrl: "https://lebohangdev.github.io/HajiraPortfolio/#/product/?payment=success",
+          cancelUrl: "https://lebohangdev.github.io/HajiraPortfolio/#/product/?payment=cancel",
         }),
       });
 
