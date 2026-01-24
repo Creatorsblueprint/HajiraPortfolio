@@ -18,11 +18,11 @@ function Nav({ setActive, active }) {
                             <hr className={active === 'Home' ? styles.activeNavUnderline : styles.notActiveUnderline} />
                         </div>
 
-                        <div className={active === "Product" ? styles.activeNav : styles.notActiveNav}>
+                        <div className={active === "Playlist" ? styles.activeNav : styles.notActiveNav}>
                             <h1>
-                                <Link to="/product" style={{ color: 'inherit', textDecoration: 'none' }}>Product</Link>
+                                <Link to="/playlist" style={{ color: 'inherit', textDecoration: 'none' }}>Playlist</Link>
                             </h1>
-                            <hr className={active === 'Product' ? styles.activeNavUnderline : styles.notActiveUnderline} />
+                            <hr className={active === 'Playlist' ? styles.activeNavUnderline : styles.notActiveUnderline} />
                         </div>
                         <div className={active === 'Potfolio' ? styles.activeNav : styles.notActiveNav}>
                             <h1><a href="portfolio-Hajira-compressed.pdf" download style={{ color: 'inherit', textDecoration: 'none' }}>Portfolio</a></h1>
@@ -73,12 +73,12 @@ function Nav({ setActive, active }) {
                         </div>
 
 
-                        <div className={active === "Product" ? styles.activeNav : styles.notActiveNav}>
+                        <div className={active === "Playlist" ? styles.activeNav : styles.notActiveNav}>
                             <i className="ri-shopping-cart-2-line"></i>
                             <h1>
-                                <Link to="/product" onClick={() => setHamburger(false)} style={{ color: 'inherit', textDecoration: 'none' }}>Product</Link>
+                                <Link to="/playlist" onClick={() => setHamburger(false)} style={{ color: 'inherit', textDecoration: 'none' }}>Playlist</Link>
                             </h1>
-                            {/* <h1 onClick={(e) => { e.preventDefault(); setActive('Product') }} >Product</h1> */}
+                            {/* <h1 onClick={(e) => { e.preventDefault(); setActive('Playlist') }} >Playlist</h1> */}
                         </div>
                         <div className={active === 'Potfolio' ? styles.activeNav : styles.notActiveNav}>
                             <i className="ri-file-2-fill"></i>

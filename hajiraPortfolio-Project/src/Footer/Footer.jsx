@@ -14,8 +14,8 @@ function Footer({ setActive, active }) {
                             <h1><Link to="/">Home</Link></h1>
                         </div>
 
-                        <div className={active === "Product" ? styles.activeNav : styles.notActiveNav}>
-                            <h1><Link to="/product">Product</Link></h1>
+                        <div className={active === "Playlist" ? styles.activeNav : styles.notActiveNav}>
+                            <h1><Link to="/playlist">Playlist</Link></h1>
                         </div>
 
                         <div className={active === 'Contact' ? styles.activeNav : styles.notActiveNav}>

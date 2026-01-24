@@ -4,7 +4,7 @@ import About from "./About/About.jsx";
 import Footer from "./Footer/Footer.jsx";
 import PaymentSuccess from "./paymentPopups/PaymentSuccess.jsx";
 import PaymentCancel from "./paymentPopups/PaymentCancel.jsx";
-import Product from "./Product/Product.jsx";
+import Playlist from "./Playlist/Playlist.jsx";
 import { useState, useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Routes, Route, useLocation } from "react-router-dom";
@@ -54,7 +54,7 @@ function App() {
   // For now, let's assume we will update Nav/Footer to use React Router's hooks or NavLink.
   // But to be safe, let's derive 'active' for now.
   let active = 'Home';
-  if (location.pathname === '/product') active = 'Product';
+  if (location.pathname === '/playlist') active = 'Playlist';
 
   return (
     <>
@@ -82,9 +82,9 @@ function App() {
               <Home />
             </div>
           } />
-          <Route path="/product" element={
+          <Route path="/playlist" element={
             <div className="activeSection">
-              <Product />
+              <Playlist />
             </div>
           } />
         </Routes>
