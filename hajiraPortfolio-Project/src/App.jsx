@@ -7,7 +7,7 @@ import PaymentCancel from "./paymentPopups/PaymentCancel.jsx";
 import Playlist from "./Playlist/Playlist.jsx";
 import { useState, useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 
 
 
@@ -87,6 +87,7 @@ function App() {
               <Playlist />
             </div>
           } />
+          <Route path="/product" element={<Navigate to="/playlist" replace />} />
         </Routes>
       </div>
 
