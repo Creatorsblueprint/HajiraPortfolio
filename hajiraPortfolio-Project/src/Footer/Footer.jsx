@@ -34,7 +34,7 @@ function Footer({ setActive, active }) {
                         </div>
                         <div className={styles.footerBottomContainer}>
                             <div className={styles.footerCopyright}>
-                                <p>Copyright 2026</p>
+                                <p>Copyright {new Date().getFullYear()}</p>
                                 <i className="ri-copyright-line"></i>
                             </div>
                             <div className={styles.dev}>
