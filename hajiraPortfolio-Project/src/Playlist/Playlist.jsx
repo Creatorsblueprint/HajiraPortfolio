@@ -74,8 +74,8 @@ function PlaylistSection() {
           amount: roundedPrice, // backend multiplies by 100
           email: email,
           currency: code,
-          successUrl: "https://lebohangdev.github.io/HajiraPortfolio/?payment=success",
-          cancelUrl: "https://lebohangdev.github.io/HajiraPortfolio/?payment=cancel",
+          successUrl: "https://www.hajirakhan.com/?payment=success",
+          cancelUrl: "https://www.hajirakhan.com/?payment=cancel",
         }),
       });
 
