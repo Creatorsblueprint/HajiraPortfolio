@@ -65,7 +65,7 @@ function PlaylistSection() {
       let roundedPrice = round(price)
 
 
-      const response = await fetch("https://hajiraportfolio-backend.onrender.com/api/create-payment-intent", {
+      const response = await fetch("https://hajirabackend-648711352735.me-west1.run.app/api/create-payment-intent", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
